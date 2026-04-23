@@ -352,13 +352,13 @@ a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
 .preview-phone-wrap::after {
   content: '';
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 36px;
+  width: 12px;
   height: 12px;
-  background: #1a1a1a;
-  border-radius: 10px;
+  background: #000;
+  border-radius: 50%;
   z-index: 5;
 }
 .hero-frame {
