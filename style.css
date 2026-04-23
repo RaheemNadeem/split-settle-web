@@ -338,14 +338,39 @@ a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
   filter: drop-shadow(0 40px 60px rgba(11,15,20,0.22)) drop-shadow(0 6px 12px rgba(11,15,20,0.1));
   will-change: transform;
 }
+.phone-wrap::before,
+.preview-phone-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 52px;
+  background: #1a1a1a;
+  z-index: -1;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.phone-wrap::after,
+.preview-phone-wrap::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 28px;
+  background: #1a1a1a;
+  border-radius: 0 0 16px 16px;
+  z-index: 5;
+}
 .hero-frame {
   width: 100%;
   height: 100%;
   border: 0;
   border-radius: 48px;
-  background: transparent;
+  background: #1B3D2F;
   display: block;
   color-scheme: light;
+  position: relative;
+  z-index: 1;
 }
 
 /* Floating cards */
@@ -745,9 +770,11 @@ a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
   height: 100%;
   border: 0;
   border-radius: 48px;
-  background: transparent;
+  background: #1B3D2F;
   display: block;
   color-scheme: light;
+  position: relative;
+  z-index: 1;
 }
 
 .preview-nav {
