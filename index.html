@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Split Settle — Split Expenses, Not Friendships</title>
+  <title>Split Settle — Split expenses, not friendships</title>
   <meta name="description" content="Split Settle makes splitting expenses with friends, roommates, and travel buddies effortless. Track balances, settle debts, and manage shared costs." />
   <link rel="icon" type="image/png" href="/icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
@@ -19,9 +24,9 @@
       </a>
       <div class="nav-links">
         <a href="#features" class="nav-link">Features</a>
-        <a href="#how-it-works" class="nav-link">How It Works</a>
-        <a href="/privacy.html" class="nav-link">Privacy</a>
-        <a href="https://play.google.com/store/apps/details?id=com.settle.app" class="nav-cta" target="_blank">Get the App</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#download" class="nav-link">Download</a>
+        <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" class="nav-cta" target="_blank">Get the app</a>
       </div>
       <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -32,81 +37,158 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="#features" class="mobile-link">Features</a>
-    <a href="#how-it-works" class="mobile-link">How It Works</a>
-    <a href="/privacy.html" class="mobile-link">Privacy</a>
-    <a href="https://play.google.com/store/apps/details?id=com.settle.app" class="mobile-cta" target="_blank">Get the App</a>
+    <a href="#how-it-works" class="mobile-link">How it works</a>
+    <a href="#download" class="mobile-link">Download</a>
+    <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" class="mobile-cta" target="_blank">Get the app</a>
   </div>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">💰 Now on Google Play</div>
-      <h1 class="hero-title">Split Expenses,<br /><span class="hero-accent">Not Friendships</span></h1>
-      <p class="hero-subtitle">Split Settle makes splitting expenses with friends, roommates, and travel buddies effortless. Track balances, settle debts, and manage shared costs — all in one beautiful app.</p>
-      <div class="hero-actions">
-        <a href="https://play.google.com/store/apps/details?id=com.settle.app" class="btn btn-primary" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          Download for Android
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content reveal">
+      <span class="pill">✦ Now on Google Play — free to start</span>
+
+      <h1 class="hero-title">
+        <span class="split-text" data-text="Split expenses,"></span><br />
+        <span class="hero-accent split-text" data-text="not friendships."></span>
+      </h1>
+
+      <p class="hero-sub reveal d2">
+        Track shared expenses, simplify debts, and settle up in seconds. Built for groups who'd rather enjoy the trip than argue over the bill.
+      </p>
+
+      <div class="hero-actions reveal d3">
+        <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" class="btn btn-primary" target="_blank">
+          Get Split Settle
+        </a>
+        <a href="#how-it-works" class="btn btn-ghost">
+          See how it works <span class="arrow">↓</span>
         </a>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-value">∞</span>
-          <span class="stat-label">Unlimited Groups</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-value">3+</span>
-          <span class="stat-label">Split Methods</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-value">🌍</span>
-          <span class="stat-label">Multi-Currency</span>
-        </div>
+    </div>
+
+    <!-- Live hero preview -->
+    <div class="phone-wrap reveal-scale d3" data-parallax="-0.12">
+      <iframe
+        class="hero-frame"
+        src="/preview/index.html?screen=home"
+        title="Settle live preview"
+        loading="eager"
+        scrolling="no"
+      ></iframe>
+    </div>
+
+    <!-- Floating cards -->
+    <div class="float-card float-1" data-parallax="0.22">
+      <div class="fc-icon" style="background:#FEF3C7">🍕</div>
+      <div>
+        <div class="fc-title">Pizza night</div>
+        <div class="fc-sub warn">You owe $12.50</div>
       </div>
     </div>
-  </section>
+
+    <div class="float-card float-2" data-parallax="-0.28">
+      <div class="fc-icon" style="background:#ECFDF5;color:#059669;font-size:16px">✓</div>
+      <div>
+        <div class="fc-title pos">Settled up!</div>
+        <div class="fc-sub">Diego paid you</div>
+      </div>
+    </div>
+
+    <div class="float-card float-3" data-parallax="0.18">
+      <div class="fc-icon" style="background:var(--accent-bg);color:var(--accent);font-size:16px">✈</div>
+      <div>
+        <div class="fc-title">Lisbon Trip</div>
+        <div class="fc-sub accent">+$32.00</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
 
   <!-- Features -->
   <section class="features" id="features">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Features</span>
-        <h2 class="section-title">Everything you need to split expenses</h2>
-        <p class="section-subtitle">No more awkward money conversations. Split Settle handles the math so you can focus on what matters.</p>
+        <div class="reveal"><span class="pill">Features</span></div>
+        <h2 class="section-title reveal d1">
+          Everything you need,<br /><span class="muted">nothing you don't.</span>
+        </h2>
       </div>
+
       <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">👥</div>
-          <h3 class="feature-title">Groups & Friends</h3>
-          <p class="feature-desc">Create groups for trips, households, or events. Add friends and start tracking expenses instantly.</p>
+        <div class="feature-card reveal d1">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M14 3L3 9l11 6 11-6-11-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M3 19l11 6 11-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 14l11 6 11-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Smart debt simplification</h3>
+          <p class="feature-desc">Owe Maya $20, Maya owes Diego $20? One payment settles it. Our algorithm minimizes total transfers across the group.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">💸</div>
-          <h3 class="feature-title">Smart Splitting</h3>
-          <p class="feature-desc">Split evenly, by exact amounts, or percentages. Settle calculates who owes what automatically.</p>
+
+        <div class="feature-card reveal d2">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <rect x="3" y="6" width="22" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M3 12h22" stroke="currentColor" stroke-width="2"/>
+              <circle cx="8" cy="18" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Any payment method</h3>
+          <p class="feature-desc">Venmo, Zelle, cash, UPI — log it however it happened. We track the math, you pick the rails.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3 class="feature-title">Real-Time Balances</h3>
-          <p class="feature-desc">See exactly who owes you and who you owe at a glance. Always up to date, always accurate.</p>
+
+        <div class="feature-card reveal d3">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M21 15v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M14 3v14m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Splitwise import</h3>
+          <p class="feature-desc">Moving over? Import your full Splitwise history in one step — groups, balances, and all.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🤝</div>
-          <h3 class="feature-title">Easy Settlements</h3>
-          <p class="feature-desc">Record payments and settle up with a single tap. Mark debts as resolved instantly.</p>
+
+        <div class="feature-card reveal d1">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 8v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-time activity</h3>
+          <p class="feature-desc">See who added what, when. Every expense, edit, and settlement shows up instantly in the feed.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔔</div>
-          <h3 class="feature-title">Push Notifications</h3>
-          <p class="feature-desc">Get notified when expenses are added or debts are settled. Stay in the loop automatically.</p>
+
+        <div class="feature-card reveal d2">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M7 14l4 4 10-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="3" y="3" width="22" height="22" rx="6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Flexible splits</h3>
+          <p class="feature-desc">Equal, percentage, or exact amounts — split it your way. Handle taxes and tips without the mental math.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔒</div>
-          <h3 class="feature-title">Secure & Private</h3>
-          <p class="feature-desc">End-to-end encrypted data with row-level security. Your financial data stays yours.</p>
+
+        <div class="feature-card reveal d3">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M3 6a3 3 0 013-3h10a3 3 0 013 3v16a3 3 0 01-3 3H6a3 3 0 01-3-3V6z" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 9h8M7 13h8M7 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Secure &amp; private</h3>
+          <p class="feature-desc">Row-level security on every record. Your data is yours — biometric lock, encrypted in transit and at rest.</p>
         </div>
       </div>
     </div>
@@ -116,39 +198,187 @@
   <section class="how-it-works" id="how-it-works">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">How It Works</span>
-        <h2 class="section-title">Three simple steps</h2>
+        <div class="reveal"><span class="pill">How it works</span></div>
+        <h2 class="section-title reveal d1">
+          Three steps.<br /><span class="muted">Zero awkwardness.</span>
+        </h2>
       </div>
+
       <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3 class="step-title">Create a Group</h3>
-          <p class="step-desc">Set up a group for your trip, apartment, or dinner. Invite friends by email.</p>
+        <div class="step reveal d1">
+          <div class="step-visual">
+            <div class="step1-card">
+              <div class="step1-label">AMOUNT</div>
+              <div class="step1-amount" id="step1-amount">$48.00</div>
+              <div class="step1-note">Dinner at Tasca do Chico</div>
+            </div>
+          </div>
+          <span class="step-num">01</span>
+          <h3 class="step-title">Add an expense</h3>
+          <p class="step-desc">Snap a receipt or type it in. Tag who was there, pick a split method — done in under 10 seconds.</p>
         </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3 class="step-title">Add Expenses</h3>
-          <p class="step-desc">Log expenses as they happen. Choose how to split — equal, exact, or percentage.</p>
+
+        <div class="step reveal d2">
+          <div class="step-visual">
+            <div class="step2-list">
+              <div class="step2-row">
+                <div class="step2-dot warn">↑</div>
+                <div class="step2-body"><b>You</b> <span class="muted">→</span> <b>Maya</b></div>
+                <div class="step2-amt warn">$12.00</div>
+              </div>
+              <div class="step2-row">
+                <div class="step2-dot pos">↓</div>
+                <div class="step2-body"><b>Diego</b> <span class="muted">→</span> <b>You</b></div>
+                <div class="step2-amt pos">$8.50</div>
+              </div>
+              <div class="step2-note">Simplified: 1 payment instead of 3</div>
+            </div>
+          </div>
+          <span class="step-num">02</span>
+          <h3 class="step-title">We do the math</h3>
+          <p class="step-desc">Split Settle automatically calculates who owes whom. Our smart algorithm finds the fewest payments needed.</p>
         </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3 class="step-title">Settle Up</h3>
-          <p class="step-desc">See your balances and settle debts with a tap. Done!</p>
+
+        <div class="step reveal d3">
+          <div class="step-visual">
+            <div class="step3-wrap">
+              <div class="step3-circle" id="step3-circle">
+                <svg id="step3-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M16 8v16M8 16h16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="step3-text" id="step3-text">Send request</div>
+              <div class="step3-sub" id="step3-sub">Tap to notify Maya</div>
+            </div>
+          </div>
+          <span class="step-num">03</span>
+          <h3 class="step-title">Settle up</h3>
+          <p class="step-desc">One tap sends a request. Mark it paid when the money lands. Balances update instantly for everyone.</p>
+        </div>
+      </div>
+
+      <!-- Interactive demo -->
+      <div class="demo-block">
+        <div class="section-header">
+          <h3 class="demo-title reveal">Try it — split a dinner bill</h3>
+          <p class="demo-sub reveal d1">Interactive demo. Drag the slider to change the total.</p>
+        </div>
+        <div class="demo-card reveal">
+          <div class="demo-total">
+            <div class="demo-total-label">Dinner total</div>
+            <div class="demo-total-amt" id="demo-total">$120.00</div>
+          </div>
+          <div class="demo-slider-wrap">
+            <input type="range" min="20" max="500" step="5" value="120" id="demo-slider" class="demo-slider" />
+            <div class="demo-slider-marks"><span>$20</span><span>$500</span></div>
+          </div>
+          <div class="demo-split-label">Split equally — 4 people</div>
+          <div class="demo-people">
+            <div class="demo-person"><div class="demo-avatar" style="background:var(--accent)">Y</div><div class="demo-name">You</div><div class="demo-amt accent" id="demo-amt-0">$30.00</div></div>
+            <div class="demo-person"><div class="demo-avatar" style="background:#7C3AED">M</div><div class="demo-name">Maya</div><div class="demo-amt" id="demo-amt-1">$30.00</div></div>
+            <div class="demo-person"><div class="demo-avatar" style="background:#059669">D</div><div class="demo-name">Diego</div><div class="demo-amt" id="demo-amt-2">$30.00</div></div>
+            <div class="demo-person"><div class="demo-avatar" style="background:#DC2626">S</div><div class="demo-name">Sam</div><div class="demo-amt" id="demo-amt-3">$30.00</div></div>
+          </div>
+          <div class="demo-footer" id="demo-footer">Each person pays $30.00 — fair and square</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <h2 class="cta-title">Ready to stop arguing about money?</h2>
-        <p class="cta-subtitle">Download Split Settle and split expenses the easy way.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.settle.app" class="btn btn-primary btn-lg" target="_blank">
-          Get Split Settle — It's Free
+  <!-- Interactive preview -->
+  <section class="screenshots" id="screenshots">
+    <div class="container-wide">
+      <div class="section-header">
+        <div class="reveal"><span class="pill">Live preview</span></div>
+        <h2 class="section-title reveal d1">
+          Don't take our word<br /><span class="muted">try it yourself.</span>
+        </h2>
+        <p class="section-sub reveal d2">Every screen is real, live, and interactive — right here in your browser.</p>
+      </div>
+
+      <div class="preview-stage reveal">
+        <div class="preview-phone-wrap">
+          <iframe
+            id="preview-frame"
+            class="preview-frame"
+            src="/preview/index.html?screen=home"
+            title="Settle live preview"
+            loading="lazy"
+            allow="autoplay"
+            scrolling="no"
+          ></iframe>
+        </div>
+
+        <div class="preview-nav" id="preview-nav">
+          <button class="preview-pill active" data-screen="home"     data-label="Home dashboard"        data-sub="See all balances at a glance">Home</button>
+          <button class="preview-pill"        data-screen="groups"   data-label="Groups"                data-sub="Every shared expense, tracked">Groups</button>
+          <button class="preview-pill"        data-screen="group"    data-label="Group overview"        data-sub="Dive into a single trip"                   data-params="groupId=g-lisbon">Group detail</button>
+          <button class="preview-pill"        data-screen="expense"  data-label="Expense detail"        data-sub="Who paid, who owes, split breakdown"       data-params="expenseId=e3">Expense</button>
+          <button class="preview-pill"        data-screen="add"      data-label="Add expense"           data-sub="Log it in under 10 seconds">Add expense</button>
+          <button class="preview-pill"        data-screen="activity" data-label="Activity feed"         data-sub="Real-time group updates">Activity</button>
+          <button class="preview-pill"        data-screen="friend"   data-label="Friend thread"         data-sub="Every dollar between you and them"         data-params="friendId=maya">Friend</button>
+          <button class="preview-pill"        data-screen="friends"  data-label="Friends"               data-sub="All the people you split with">Friends</button>
+          <button class="preview-pill"        data-screen="simplify" data-label="Simplify debts"        data-sub="Minimum payments to settle everyone up"    data-params="groupId=g-lisbon">Simplify</button>
+          <button class="preview-pill"        data-screen="record"   data-label="Record settlement"     data-sub="Mark a payment complete"                   data-params="groupId=g-lisbon">Settle up</button>
+          <button class="preview-pill"        data-screen="import"   data-label="Import from Splitwise" data-sub="Move your whole history over">Import</button>
+          <button class="preview-pill"        data-screen="account"  data-label="Account"               data-sub="Tune it to how you play">Account</button>
+          <button class="preview-pill"        data-screen="signin"   data-label="Sign in"               data-sub="A warm, familiar welcome">Sign in</button>
+        </div>
+
+        <div class="preview-caption">
+          <div class="preview-label" id="preview-label">Home dashboard</div>
+          <div class="preview-sub" id="preview-sub">See all balances at a glance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="download" id="download">
+    <div class="download-bg"></div>
+    <div class="container download-content">
+      <div class="reveal">
+        <div class="download-logo">
+          <img src="/icon.png" alt="Split Settle" />
+        </div>
+      </div>
+
+      <h2 class="section-title reveal d1">
+        Ready to stop<br />
+        <span class="hero-accent">splitting headaches?</span>
+      </h2>
+
+      <p class="section-sub reveal d2">
+        Join thousands who've already made shared expenses painless. Free to start, no credit card needed.
+      </p>
+
+      <div class="download-badges reveal d3">
+        <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" class="store-badge" target="_blank" rel="noopener">
+          <svg class="store-icon" width="26" height="28" viewBox="0 0 24 24" aria-hidden="true">
+            <defs>
+              <linearGradient id="gp-blue" x1="0" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#00D2FF"/>
+                <stop offset="1" stop-color="#1A73E8"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#gp-blue)" d="M3.6 1.81L13.8 12 3.6 22.19a.99.99 0 01-.6-.92V2.73a1 1 0 01.6-.92z"/>
+            <path fill="#34A853"       d="M4 1.73a1 1 0 01.39-.08L17.4 9.16l-3.6 2.84L4 1.73z"/>
+            <path fill="#EA4335"       d="M4 22.27a1 1 0 01-.39-.08L13.8 12l3.6 2.84L4 22.27z"/>
+            <path fill="#FBBC04"       d="M17.4 9.16l3.32 1.91c1.01.58 1.01 1.69 0 2.27L17.4 15.27 13.8 12l3.6-2.84z"/>
+          </svg>
+          <div>
+            <div class="store-label">Get it on</div>
+            <div class="store-name">Google Play</div>
+          </div>
+        </a>
+        <a href="#" class="store-badge disabled" aria-disabled="true" onclick="event.preventDefault()">
+          <svg class="store-icon" width="24" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+          </svg>
+          <div>
+            <div class="store-label">Coming soon to</div>
+            <div class="store-name">App Store</div>
+          </div>
         </a>
       </div>
     </div>
@@ -166,8 +396,8 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Product</h4>
           <a href="#features">Features</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="https://play.google.com/store/apps/details?id=com.settle.app" target="_blank">Download</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#download">Download</a>
         </div>
         <div class="footer-col">
           <h4 class="footer-col-title">Legal</h4>
@@ -177,7 +407,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 Split Settle. All rights reserved.</p>
+      <p>© 2026 Split Settle. Made with care.</p>
     </div>
   </footer>
 
