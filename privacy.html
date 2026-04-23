@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Settle — Privacy Policy</title>
+  <meta name="description" content="Split Settle's privacy policy. Learn how we handle your data." />
+  <link rel="icon" type="image/png" href="/icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/icon.png" alt="Split Settle" class="nav-logo-img" />
+        <span class="nav-logo-text">Split Settle</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/#features" class="nav-link">Features</a>
+        <a href="/privacy.html" class="nav-link active">Privacy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.settle.app" class="nav-cta" target="_blank">Get the App</a>
+      </div>
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/" class="mobile-link">Home</a>
+    <a href="/#features" class="mobile-link">Features</a>
+    <a href="/privacy.html" class="mobile-link active">Privacy</a>
+    <a href="https://play.google.com/store/apps/details?id=com.settle.app" class="mobile-cta" target="_blank">Get the App</a>
+  </div>
+
+  <!-- Privacy Policy Content -->
+  <section class="privacy-hero">
+    <div class="container">
+      <span class="section-tag">Legal</span>
+      <h1 class="privacy-title">Privacy Policy</h1>
+      <p class="privacy-updated">Last updated: April 22, 2026</p>
+    </div>
+  </section>
+
+  <section class="privacy-content">
+    <div class="container privacy-container">
+      <p class="privacy-intro">Split Settle ("we", "our", or "the app") is a mobile application that helps friends split expenses and track shared balances. Your privacy is important to us. This policy explains what data we collect, how we use it, and your rights.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>We collect only the minimum data necessary to provide expense-splitting functionality:</p>
+      <ul>
+        <li><strong>Account Information:</strong> Your name and email address when you create an account (via email sign-up or Google Sign-In).</li>
+        <li><strong>Profile Data:</strong> Optional profile photo and display name that you choose to set.</li>
+        <li><strong>Expense Data:</strong> Expense descriptions, amounts, currencies, dates, and split information that you create within the app.</li>
+        <li><strong>Settlement Data:</strong> Payment records between you and your friends.</li>
+        <li><strong>Group Data:</strong> Group names, membership, and associated expenses that you create.</li>
+        <li><strong>Device Information:</strong> Push notification tokens to deliver real-time notifications (only when you grant permission).</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>To provide the core expense-splitting and balance-tracking functionality.</li>
+        <li>To authenticate your identity and secure your account.</li>
+        <li>To send push notifications about expenses and settlements involving you.</li>
+        <li>To enable you to find and connect with friends on the platform.</li>
+        <li>To maintain and improve the app's performance and reliability.</li>
+      </ul>
+
+      <h2>3. Data Storage & Security</h2>
+      <p>Your data is stored securely on <strong>Supabase</strong> (backed by PostgreSQL with row-level security). All data is transmitted over HTTPS/TLS encryption. We implement the following security measures:</p>
+      <ul>
+        <li>Row-Level Security (RLS) policies ensuring users can only access their own data.</li>
+        <li>Encrypted authentication tokens managed by Supabase Auth.</li>
+        <li>Optional biometric lock (fingerprint/face) for app access.</li>
+        <li>Secure local storage for session tokens (AsyncStorage/SecureStore).</li>
+      </ul>
+
+      <h2>4. Third-Party Services</h2>
+      <p>We use the following third-party services:</p>
+      <ul>
+        <li><strong>Supabase</strong> — Database, authentication, and serverless functions. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a></li>
+        <li><strong>Google Sign-In</strong> — OAuth authentication (only if you choose to sign in with Google). <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><strong>Expo Push Notifications</strong> — Delivers push notifications. <a href="https://expo.dev/privacy" target="_blank">Expo Privacy Policy</a></li>
+        <li><strong>Firebase Cloud Messaging (FCM)</strong> — Android push notification delivery. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+      </ul>
+
+      <h2>5. Data Sharing</h2>
+      <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for marketing purposes. Your data is shared only in these limited cases:</p>
+      <ul>
+        <li><strong>With your friends:</strong> When you add an expense or settlement, the other party sees the relevant transaction details (amount, description, date).</li>
+        <li><strong>With group members:</strong> Group expenses and balances are visible to all members of that group.</li>
+        <li><strong>Service providers:</strong> Our infrastructure providers (Supabase, Google, Expo) process data as described above.</li>
+        <li><strong>Legal requirements:</strong> If required by law or to protect our legal rights.</li>
+      </ul>
+
+      <h2>6. Data Retention</h2>
+      <p>Your data is retained for as long as your account is active. Deleted expenses are soft-deleted (marked as inactive) but may be permanently removed after 90 days. If you delete your account, all associated data will be permanently deleted within 30 days.</p>
+
+      <h2>7. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> your personal data through the app (Account → Edit Profile, Export Data).</li>
+        <li><strong>Correct</strong> your information (change name, email) at any time.</li>
+        <li><strong>Export</strong> your data as a CSV file from Account → Export.</li>
+        <li><strong>Delete</strong> your account and all associated data by contacting us.</li>
+        <li><strong>Withdraw consent</strong> for push notifications via your device settings.</li>
+      </ul>
+
+      <h2>8. Children's Privacy</h2>
+      <p>Split Settle is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal data, we will delete it promptly.</p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date at the top and notify users of material changes through the app or email.</p>
+
+      <h2>10. Contact Us</h2>
+      <p>If you have questions about this privacy policy or your data, contact us at:</p>
+      <p><strong>Email:</strong> <a href="mailto:privacy@settle.app">privacy@settle.app</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/icon.png" alt="Split Settle" class="footer-logo" />
+        <span class="footer-name">Split Settle</span>
+        <p class="footer-tagline">Split expenses, not friendships.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <a href="/#features">Features</a>
+          <a href="/#how-it-works">How It Works</a>
+          <a href="https://play.google.com/store/apps/details?id=com.settle.app" target="_blank">Download</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="mailto:privacy@settle.app">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Split Settle. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
