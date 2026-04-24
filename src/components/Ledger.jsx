@@ -29,9 +29,9 @@ export default function Ledger() {
               The math / Debt simplification
             </div>
             <h2 className="reveal d1" style={{
-              fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 6vw, 84px)',
+              fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 5vw, 64px)',
               fontWeight: 400, lineHeight: 0.95, letterSpacing: '-0.02em',
-              color: 'var(--paper)', maxWidth: 900, textWrap: 'balance',
+              color: 'var(--paper)', maxWidth: 800, textWrap: 'balance',
             }}>Twelve IOUs. <i style={{ color: 'var(--lime)' }}>Three</i> payments.</h2>
             <p className="reveal d2" style={{ fontSize: 17, lineHeight: 1.55, color: 'var(--paper-edge)', maxWidth: 560, marginTop: 20, textWrap: 'pretty' }}>
               After a weekend in Lisbon, four friends have scattered debts across six expenses.

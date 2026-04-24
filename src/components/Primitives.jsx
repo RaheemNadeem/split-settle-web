@@ -29,9 +29,9 @@ export function SectionHeader({ eyebrow, number, title, children }) {
   return (
     <div style={{
       display: 'grid', gridTemplateColumns: '80px 1fr',
-      gap: 24, alignItems: 'baseline',
+      gap: 20, alignItems: 'baseline',
       borderTop: '1px solid var(--ink)',
-      paddingTop: 24, marginBottom: 56,
+      paddingTop: 20, marginBottom: 44,
     }}>
       <div className="mono reveal" style={{
         fontSize: 11, color: 'var(--ink-2)', letterSpacing: '0.05em',
@@ -40,17 +40,17 @@ export function SectionHeader({ eyebrow, number, title, children }) {
       <div>
         <div className="mono reveal" style={{
           fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.1em',
-          textTransform: 'uppercase', fontWeight: 500, marginBottom: 12,
+          textTransform: 'uppercase', fontWeight: 500, marginBottom: 10,
         }}>{eyebrow}</div>
         <h2 className="reveal d1" style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(40px, 6vw, 84px)',
+          fontSize: 'clamp(32px, 5vw, 64px)',
           fontWeight: 400, lineHeight: 0.95,
           letterSpacing: '-0.02em', color: 'var(--ink)',
-          maxWidth: 900, textWrap: 'balance',
+          maxWidth: 800, textWrap: 'balance',
         }}>{title}</h2>
         {children && (
-          <div className="reveal d2" style={{ marginTop: 20, maxWidth: 560 }}>
+          <div className="reveal d2" style={{ marginTop: 16, maxWidth: 520 }}>
             {children}
           </div>
         )}
@@ -62,8 +62,8 @@ export function SectionHeader({ eyebrow, number, title, children }) {
 // Editorial Button
 export function EditorialButton({ children, variant = 'solid', href, onClick, style = {}, size = 'md' }) {
   const [hover, setHover] = useState(false);
-  const basePad = size === 'lg' ? '18px 32px' : size === 'sm' ? '10px 18px' : '14px 26px';
-  const fontSize = size === 'lg' ? 15 : size === 'sm' ? 12 : 13;
+  const basePad = size === 'lg' ? '14px 26px' : size === 'sm' ? '8px 16px' : '12px 22px';
+  const fontSize = size === 'lg' ? 13 : size === 'sm' ? 11 : 12;
 
   const variants = {
     solid: {
