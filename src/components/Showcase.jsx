@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { SectionHeader } from './Primitives'
 import { SHOWCASE_SCREENS } from '../data'
 
 export default function Showcase() {
   const [active, setActive] = useState(0);
-  const [key, setKey] = useState(0);
-
-  // Auto-rotate
-  useEffect(() => {
-    const iv = setInterval(() => {
-      setActive(a => (a + 1) % SHOWCASE_SCREENS.length);
-      setKey(k => k + 1);
-    }, 3600);
-    return () => clearInterval(iv);
-  }, []);
-
-  const s = SHOWCASE_SCREENS[active];
-  const url = `/preview/index.html?screen=${s.screen}${s.params ? '&' + s.params : ''}`;
 
   return (
     <section className="showcase-section" id="showcase">
@@ -30,33 +17,40 @@ export default function Showcase() {
         </SectionHeader>
 
         <div className="showcase-grid">
-          <div className="reveal-left showcase-stage" style={{ background: s.tint }}>
+          <div className="reveal-left showcase-stage" style={{ background: SHOWCASE_SCREENS[active].tint }}>
             <div className="corner-mark tl" />
             <div className="corner-mark tr" />
             <div className="corner-mark bl" />
             <div className="corner-mark br" />
-            <div className="fig-num">FIG. {String(active + 4).padStart(2, '0')} / {s.tag}</div>
+            <div className="fig-num">FIG. {String(active + 4).padStart(2, '0')} / {SHOWCASE_SCREENS[active].tag}</div>
             <div className="showcase-phone">
-              <iframe
-                key={url}
-                src={url}
-                title="App preview"
-                loading="lazy"
-                scrolling="no"
-              />
+              {/* Render ALL iframes, show/hide to avoid reload flash */}
+              {SHOWCASE_SCREENS.map((sc, i) => {
+                const url = `/preview/index.html?screen=${sc.screen}${sc.params ? '&' + sc.params : ''}`;
+                return (
+                  <iframe
+                    key={sc.screen}
+                    src={url}
+                    title={`App preview ${sc.screen}`}
+                    scrolling="no"
+                    style={{
+                      position: i === active ? 'relative' : 'absolute',
+                      opacity: i === active ? 1 : 0,
+                      pointerEvents: i === active ? 'auto' : 'none',
+                      transition: 'opacity 0.15s ease',
+                    }}
+                  />
+                );
+              })}
             </div>
           </div>
 
           <div className="showcase-list">
             {SHOWCASE_SCREENS.map((sc, i) => (
-              <button key={i} onClick={() => {
-                setActive(i);
-                setKey(k => k + 1);
-              }}>
+              <button key={i} onClick={() => setActive(i)}>
                 <span className={`s-num ${i === active ? 'active' : ''}`}>0{i + 1} /</span>
                 <span className={`s-caption ${i === active ? 'active' : ''}`}>{sc.caption}</span>
                 <span className="s-tag">{sc.tag}</span>
-                {i === active && <div key={key} className="progress-bar" />}
               </button>
             ))}
           </div>

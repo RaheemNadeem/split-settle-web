@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState } from 'react'
 import { SectionHeader, LedgerAvatar } from './Primitives'
 import { PEOPLE, computeNet, naivePayments, simplifiedPayments } from '../data'
 
@@ -8,11 +8,7 @@ export default function Ledger() {
   const naive = naivePayments();
   const simple = simplifiedPayments();
 
-  // Auto-toggle
-  useEffect(() => {
-    const iv = setInterval(() => setMode(m => m === 'naive' ? 'simple' : 'naive'), 4500);
-    return () => clearInterval(iv);
-  }, []);
+  // Manual toggle only — no auto-switching
 
   const payments = mode === 'naive' ? naive : simple;
   const highlight = mode === 'simple';
