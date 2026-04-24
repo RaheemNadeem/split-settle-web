@@ -44,10 +44,10 @@ export function SectionHeader({ eyebrow, number, title, children }) {
         }}>{eyebrow}</div>
         <h2 className="reveal d1" style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(32px, 5vw, 64px)',
+          fontSize: 'clamp(26px, 4vw, 52px)',
           fontWeight: 400, lineHeight: 0.95,
           letterSpacing: '-0.02em', color: 'var(--ink)',
-          maxWidth: 800, textWrap: 'balance',
+          maxWidth: 700, textWrap: 'balance',
         }}>{title}</h2>
         {children && (
           <div className="reveal d2" style={{ marginTop: 16, maxWidth: 520 }}>
@@ -62,8 +62,8 @@ export function SectionHeader({ eyebrow, number, title, children }) {
 // Editorial Button
 export function EditorialButton({ children, variant = 'solid', href, onClick, style = {}, size = 'md' }) {
   const [hover, setHover] = useState(false);
-  const basePad = size === 'lg' ? '14px 26px' : size === 'sm' ? '8px 16px' : '12px 22px';
-  const fontSize = size === 'lg' ? 13 : size === 'sm' ? 11 : 12;
+  const basePad = size === 'lg' ? '12px 22px' : size === 'sm' ? '7px 14px' : '10px 18px';
+  const fontSize = size === 'lg' ? 12 : size === 'sm' ? 10 : 11;
 
   const variants = {
     solid: {
