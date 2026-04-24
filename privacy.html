@@ -1,52 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Split Settle — Privacy Policy</title>
   <meta name="description" content="Split Settle's privacy policy. Learn how we handle your data." />
   <link rel="icon" type="image/png" href="/icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #FBFBFA; --paper-2: #F2F2F1; --paper-edge: #E4E4E2;
+      --ink: #111110; --ink-2: #3A3A38; --ink-3: #77776F;
+      --line: #E4E4E0; --lime-deep: oklch(0.45 0.02 60);
+      --font-display: 'Instrument Serif', 'Times New Roman', serif;
+      --font-body: 'Geist', system-ui, sans-serif;
+      --font-mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--ink); background: var(--paper); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--ink); }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 0 32px; background: rgba(251,251,250,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    .nav-inner { max-width: 1440px; margin: 0 auto; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-wordmark { font-family: var(--font-display); font-size: 28px; font-style: italic; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+    .nav-wordmark .sep { color: var(--lime-deep); }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 32px; }
+    .privacy-hero { padding: 140px 32px 60px; border-bottom: 1px solid var(--ink); }
+    .privacy-hero h1 { font-family: var(--font-display); font-size: clamp(40px, 6vw, 72px); font-weight: 400; line-height: 0.95; letter-spacing: -0.02em; }
+    .privacy-updated { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 16px; }
+    .privacy-content { padding: 60px 32px 120px; }
+    .privacy-content h2 { font-family: var(--font-display); font-size: 28px; font-weight: 400; margin: 48px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .privacy-content p { color: var(--ink-2); margin-bottom: 16px; }
+    .privacy-content ul { padding-left: 24px; margin-bottom: 16px; color: var(--ink-2); }
+    .privacy-content li { margin-bottom: 8px; }
+    .privacy-content a { color: var(--lime-deep); }
+    .privacy-intro { font-size: 18px; line-height: 1.6; color: var(--ink-2); }
+    .footer { background: var(--paper); border-top: 1px solid var(--ink); padding: 32px; text-align: center; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.05em; }
+  </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
+  <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="/icon.png" alt="Split Settle" class="nav-logo-img" />
-        <span class="nav-logo-text">Split Settle</span>
-      </a>
-      <div class="nav-links">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/#features" class="nav-link">Features</a>
-        <a href="/privacy.html" class="nav-link active">Privacy</a>
-        <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" class="nav-cta" target="_blank">Get the App</a>
-      </div>
-      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="/" class="nav-wordmark">Split<span class="sep">·</span>Settle</a>
+      <a href="/" style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase">← Back to home</a>
     </div>
   </nav>
 
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="/" class="mobile-link">Home</a>
-    <a href="/#features" class="mobile-link">Features</a>
-    <a href="/privacy.html" class="mobile-link active">Privacy</a>
-    <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" class="mobile-cta" target="_blank">Get the App</a>
-  </div>
-
-  <!-- Privacy Policy Content -->
   <section class="privacy-hero">
     <div class="container">
-      <span class="section-tag">Legal</span>
-      <h1 class="privacy-title">Privacy Policy</h1>
+      <h1>Privacy Policy</h1>
       <p class="privacy-updated">Last updated: April 22, 2026</p>
     </div>
   </section>
 
   <section class="privacy-content">
-    <div class="container privacy-container">
+    <div class="container">
       <p class="privacy-intro">Split Settle ("we", "our", or "the app") is a mobile application that helps friends split expenses and track shared balances. Your privacy is important to us. This policy explains what data we collect, how we use it, and your rights.</p>
 
       <h2>1. Information We Collect</h2>
@@ -69,7 +79,7 @@
         <li>To maintain and improve the app's performance and reliability.</li>
       </ul>
 
-      <h2>3. Data Storage & Security</h2>
+      <h2>3. Data Storage &amp; Security</h2>
       <p>Your data is stored securely on <strong>Supabase</strong> (backed by PostgreSQL with row-level security). All data is transmitted over HTTPS/TLS encryption. We implement the following security measures:</p>
       <ul>
         <li>Row-Level Security (RLS) policies ensuring users can only access their own data.</li>
@@ -90,7 +100,7 @@
       <h2>5. Data Sharing</h2>
       <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for marketing purposes. Your data is shared only in these limited cases:</p>
       <ul>
-        <li><strong>With your friends:</strong> When you add an expense or settlement, the other party sees the relevant transaction details (amount, description, date).</li>
+        <li><strong>With your friends:</strong> When you add an expense or settlement, the other party sees the relevant transaction details.</li>
         <li><strong>With group members:</strong> Group expenses and balances are visible to all members of that group.</li>
         <li><strong>Service providers:</strong> Our infrastructure providers (Supabase, Google, Expo) process data as described above.</li>
         <li><strong>Legal requirements:</strong> If required by law or to protect our legal rights.</li>
@@ -102,7 +112,7 @@
       <h2>7. Your Rights</h2>
       <p>You have the right to:</p>
       <ul>
-        <li><strong>Access</strong> your personal data through the app (Account → Edit Profile, Export Data).</li>
+        <li><strong>Access</strong> your personal data through the app (Account → Export Data).</li>
         <li><strong>Correct</strong> your information (change name, email) at any time.</li>
         <li><strong>Export</strong> your data as a CSV file from Account → Export.</li>
         <li><strong>Delete</strong> your account and all associated data by contacting us.</li>
@@ -110,10 +120,10 @@
       </ul>
 
       <h2>8. Children's Privacy</h2>
-      <p>Split Settle is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal data, we will delete it promptly.</p>
+      <p>Split Settle is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal data, we will delete it promptly.</p>
 
       <h2>9. Changes to This Policy</h2>
-      <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date at the top and notify users of material changes through the app or email.</p>
+      <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date and notify users of material changes through the app or email.</p>
 
       <h2>10. Contact Us</h2>
       <p>If you have questions about this privacy policy or your data, contact us at:</p>
@@ -121,33 +131,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="/icon.png" alt="Split Settle" class="footer-logo" />
-        <span class="footer-name">Split Settle</span>
-        <p class="footer-tagline">Split expenses, not friendships.</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">Product</h4>
-          <a href="/#features">Features</a>
-          <a href="/#how-it-works">How It Works</a>
-          <a href="https://play.google.com/store/apps/details?id=com.splitesettle.com" target="_blank">Download</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Legal</h4>
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="mailto:privacy@settle.app">Contact</a>
-        </div>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Split Settle. All rights reserved.</p>
-    </div>
+    <span>© 2026 Split Settle Inc. · VOL. 01 · SET IN INSTRUMENT & GEIST</span>
   </footer>
-
-  <script type="module" src="/main.js"></script>
 </body>
 </html>
