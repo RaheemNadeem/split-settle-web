@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
         padding: '0 32px',
-        background: scrolled ? 'rgba(251,251,250,0.85)' : 'transparent',
+        background: scrolled ? 'rgba(255,255,255,0.85)' : 'transparent',
         backdropFilter: scrolled ? 'blur(16px) saturate(1.2)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(16px) saturate(1.2)' : 'none',
         borderBottom: scrolled ? '1px solid var(--line)' : '1px solid transparent',
@@ -31,9 +31,9 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
             <a href="/" style={{
               fontFamily: 'var(--font-display)', fontSize: 28,
-              fontStyle: 'italic', letterSpacing: '-0.02em',
+              fontWeight: 700, letterSpacing: '-0.02em',
               color: 'var(--ink)', textDecoration: 'none',
-            }}>Split<span style={{ color: 'var(--lime-deep)' }}>·</span>Settle</a>
+            }}>Split<span style={{ color: 'var(--accent)' }}>·</span>Settle</a>
             <span className="mono" style={{
               fontSize: 10, color: 'var(--ink-3)', letterSpacing: '0.1em',
             }}>EST. 2026</span>

@@ -6,7 +6,7 @@ function Mark({ v }) {
   if (v === 'yes') return (
     <span className="check-mark">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M3 7.5l3 3 5-6" stroke="var(--ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 7.5l3 3 5-6" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
   );

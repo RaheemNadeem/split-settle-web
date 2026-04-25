@@ -16,8 +16,8 @@ export function V2Pill({ children, dark = false }) {
     }}>
       <span style={{
         width: 6, height: 6, borderRadius: '50%',
-        background: dark ? 'var(--lime)' : 'var(--lime-deep)',
-        boxShadow: dark ? '0 0 8px var(--lime)' : 'none',
+        background: dark ? 'var(--accent)' : 'var(--accent)',
+        boxShadow: dark ? '0 0 8px var(--accent)' : 'none',
       }} />
       {children}
     </span>
@@ -45,7 +45,7 @@ export function SectionHeader({ eyebrow, number, title, children }) {
         <h2 className="reveal d1" style={{
           fontFamily: 'var(--font-display)',
           fontSize: 'clamp(26px, 4vw, 52px)',
-          fontWeight: 400, lineHeight: 0.95,
+          fontWeight: 700, lineHeight: 0.95,
           letterSpacing: '-0.02em', color: 'var(--ink)',
           maxWidth: 700, textWrap: 'balance',
         }}>{title}</h2>
@@ -67,12 +67,12 @@ export function EditorialButton({ children, variant = 'solid', href, onClick, st
 
   const variants = {
     solid: {
-      background: hover ? 'var(--lime-ink)' : 'var(--ink)',
-      color: 'var(--paper)', border: '1px solid var(--ink)',
+      background: hover ? 'var(--accent)' : 'var(--ink)',
+      color: '#fff', border: '1px solid var(--ink)',
     },
     lime: {
-      background: hover ? 'var(--lime-deep)' : 'var(--lime)',
-      color: 'var(--ink)', border: '1px solid var(--lime-deep)',
+      background: hover ? 'var(--lime-deep)' : 'var(--accent)',
+      color: '#fff', border: '1px solid var(--accent)',
       boxShadow: hover ? '0 4px 0 var(--ink)' : '0 2px 0 var(--ink)',
     },
     ghost: {

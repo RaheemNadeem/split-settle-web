@@ -31,7 +31,7 @@ export default function Hero() {
                 <span>friendship.</span>
                 <svg viewBox="0 0 400 22" preserveAspectRatio="none">
                   <path d="M 2 14 Q 100 2, 200 10 T 398 8" fill="none"
-                    stroke="var(--lime)" strokeWidth="12" strokeLinecap="round" />
+                    stroke="var(--accent)" strokeWidth="12" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>

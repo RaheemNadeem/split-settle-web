@@ -34,7 +34,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© 2026 Split Settle Inc.</span>
-          <span>VOL. 01 · ISSUE № 2026/04 · SET IN INSTRUMENT & GEIST</span>
+          <span>VOL. 01 · ISSUE № 2026/04 · SET IN INTER TIGHT & JETBRAINS MONO</span>
           <div className="footer-socials">
             <a href="#" className="link-editorial">𝕏</a>
             <a href="#" className="link-editorial">Instagram</a>

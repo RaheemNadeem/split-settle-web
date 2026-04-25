@@ -1,10 +1,10 @@
 // Data constants used across V2 landing components
 
 export const PEOPLE = [
-  { id: 'you',   name: 'You',   tint: '#111110' },
-  { id: 'maya',  name: 'Maya',  tint: '#A64E2C' },
-  { id: 'diego', name: 'Diego', tint: '#3B6B46' },
-  { id: 'sam',   name: 'Sam',   tint: '#5F4B8B' },
+  { id: 'you',   name: 'You',   tint: '#0B0F14' },
+  { id: 'maya',  name: 'Maya',  tint: '#DC2626' },
+  { id: 'diego', name: 'Diego', tint: '#059669' },
+  { id: 'sam',   name: 'Sam',   tint: '#7C3AED' },
 ];
 
 export const EXPENSES = [
@@ -41,10 +41,10 @@ export const FEATURE_ROWS = [
 ];
 
 export const SHOWCASE_SCREENS = [
-  { screen: 'home',     caption: 'One glance, every balance',    tag: 'HOME',     tint: 'oklch(0.94 0.04 125)' },
-  { screen: 'group',    caption: 'Every expense, threaded',      tag: 'GROUP',    tint: 'oklch(0.93 0.05 60)',  params: 'groupId=g-lisbon' },
-  { screen: 'add',      caption: 'Ten seconds, start to posted', tag: 'ADD',      tint: 'oklch(0.93 0.04 340)' },
-  { screen: 'simplify', caption: 'The fewest payments possible', tag: 'SIMPLIFY', tint: 'oklch(0.94 0.05 200)', params: 'groupId=g-lisbon' },
+  { screen: 'home',     caption: 'One glance, every balance',    tag: 'HOME',     tint: '#F0F4F8' },
+  { screen: 'group',    caption: 'Every expense, threaded',      tag: 'GROUP',    tint: '#F6F7F9',  params: 'groupId=g-lisbon' },
+  { screen: 'add',      caption: 'Ten seconds, start to posted', tag: 'ADD',      tint: '#F0F0F5' },
+  { screen: 'simplify', caption: 'The fewest payments possible', tag: 'SIMPLIFY', tint: '#EEF3FF', params: 'groupId=g-lisbon' },
 ];
 
 export const COMPARE_ROWS = [
